@@ -11,11 +11,10 @@ def nyc_pigeon_organizer(data)
           if newData[pigeon].include?(key) # Check if pigeon has the category yet
             #binding.pry
             newData[pigeon][key] << key2.to_s
-            #binding.pry
           else
             newData[pigeon] = {key => [key2.to_s]}
-            binding.pry
           end
+          binding.pry
         else
           newData = {pigeon => {key => [key2.to_s]}}
         end
