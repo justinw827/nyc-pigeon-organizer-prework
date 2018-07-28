@@ -13,7 +13,6 @@ def nyc_pigeon_organizer(data)
           else
             newData[pigeon] = {key => [key2.to_s]}
           end
-          binding.pry
         else
           newData = {pigeon => {key => [key2.to_s]}}
           binding.pry
