@@ -4,7 +4,15 @@ def nyc_pigeon_organizer(data)
   data.each do |key, val|
     val.each do |key2, val2|
       val2.each do |pigeon|
-        if newData.include?(pigeon)
+        if newData.include?(pigeon) # Check if pigeon exists in newHash
+          if newData[pigeon].include?(key) # Check if pigeon has the category yet
+            newData[pigeon][key] << key2
+          else
+            newData[pigeon] << {key => key2}
+          end
+        else
+          newData << {pigeon => {key => key2}}
+        end
       end
     end
   end
