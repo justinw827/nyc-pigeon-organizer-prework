@@ -11,10 +11,10 @@ def nyc_pigeon_organizer(data)
             #binding.pry
             newData[pigeon][key] << key2.to_s
           else
-            newData[pigeon] = {key => [key2.to_s]}
+            newData[pigeon][key] = [key2.to_s]
           end
         else
-          newData = {pigeon => {key => [key2.to_s]}}
+          newData[pigeon] =  {key => [key2.to_s]}
           binding.pry
         end
       end
