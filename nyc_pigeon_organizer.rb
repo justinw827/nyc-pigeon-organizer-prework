@@ -1,3 +1,5 @@
+require 'pry'
+
 def nyc_pigeon_organizer(data)
   newData = Hash.new
 
@@ -5,6 +7,7 @@ def nyc_pigeon_organizer(data)
     val.each do |key2, val2|
       val2.each do |pigeon|
         if newData.include?(pigeon) # Check if pigeon exists in newHash
+          binding.pry
           if newData[pigeon].include?(key) # Check if pigeon has the category yet
             newData[pigeon][key] << key2
           else
@@ -17,5 +20,6 @@ def nyc_pigeon_organizer(data)
     end
   end
 
+  binding.pry
   return newData
 end
