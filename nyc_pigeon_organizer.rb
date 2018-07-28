@@ -11,7 +11,7 @@ def nyc_pigeon_organizer(data)
             newData[pigeon] << {key => key2}
           end
         else
-          newData << {pigeon => {key => key2}}
+          newData = {pigeon => {key => key2}}
         end
       end
     end
