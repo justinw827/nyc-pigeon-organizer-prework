@@ -8,7 +8,7 @@ def nyc_pigeon_organizer(data)
           if newData[pigeon].include?(key) # Check if pigeon has the category yet
             newData[pigeon][key] << key2
           else
-            newData[pigeon] << {key => key2}
+            newData[pigeon] = {key => key2}
           end
         else
           newData = {pigeon => {key => key2}}
